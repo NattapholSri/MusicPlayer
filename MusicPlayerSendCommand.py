@@ -36,11 +36,7 @@ def play():
         play_stop = True
 
         time.sleep(0.1)
-        ser.write(b'P')
-        ser.write(b'l')
-        ser.write(b'a')
-        ser.write(b'y')
-        ser.write(b'#')
+        ser.write(b'pl')
 
     elif (play_stop == True):
         print("Stop...")
@@ -48,11 +44,7 @@ def play():
         # mixer.music.stop()
 
         time.sleep(0.1)
-        ser.write(b'S')
-        ser.write(b't')
-        ser.write(b'o')
-        ser.write(b'p')
-        ser.write(b'#')
+        ser.write(b'st')
         play_stop = False
 
 
@@ -72,11 +64,7 @@ def next():
     app.setLabel("l2", realnames[index_song])
 
     time.sleep(0.1)
-    ser.write(b'N')
-    ser.write(b'e')
-    ser.write(b'x')
-    ser.write(b't')
-    ser.write(b'#')
+    ser.write(b'fw')
 
 def back():
     global index_song
@@ -93,11 +81,7 @@ def back():
 
     app.setLabel("l2", realnames[index_song])
     time.sleep(0.1)
-    ser.write(b'b')
-    ser.write(b'a')
-    ser.write(b'c')
-    ser.write(b'k')
-    ser.write(b'#')
+    ser.write(b'rw')
 
 with gui("Music Player", "700x200", bg='orange', font={'size':18}) as app:
     app.label("Welcome to MusicPlayer", bg='blue', fg='orange')
